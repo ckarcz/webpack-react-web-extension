@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 logLevelPrefix.reg(logLevel);
 logLevelPrefix.apply(logLevel, {
-  template: '[DC] [%t] %l (%n):',
+  template: '[EXTENSION] [%t] %l (%n):',
   levelFormatter(level) {
     return level.toUpperCase();
   },
