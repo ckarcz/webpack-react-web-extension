@@ -1,0 +1,12 @@
+//- extension options view
+//- https://developer.chrome.com/extensions/options
+
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    title DealCloud Extension Options
+  body
+    #root
+    script(src=(DEV_SRV=="true" ? `${DEV_SRV_URL}/js/options.bundle.js` : '../js/options.bundle.js'))

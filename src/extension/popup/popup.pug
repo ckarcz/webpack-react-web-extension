@@ -1,0 +1,12 @@
+//- extension popup view
+//- https://developer.chrome.com/extensions/browserAction
+
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    title DealCloud-PopUp
+  body
+    #root
+    script(src=(DEV_SRV=="true" ? `${DEV_SRV_URL}/js/popup.bundle.js` : '../js/popup.bundle.js'))

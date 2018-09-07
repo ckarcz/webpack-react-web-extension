@@ -1,0 +1,8 @@
+//- extension background page/script that is loaded as needed or manually
+//- https://developer.chrome.com/extensions/background_pages
+
+doctype html
+
+html
+  head
+    script(src=(DEV_SRV=="true" ? `${DEV_SRV_URL}/js/background.bundle.js` : '../js/background.bundle.js'))

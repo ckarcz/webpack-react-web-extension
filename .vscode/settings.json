@@ -1,0 +1,30 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "package.json"
+            ],
+            "url": "http://json.schemastore.org/package.json"
+        },
+        {
+            "fileMatch": [
+                ".eslintrc"
+            ],
+            "url": "http://json.schemastore.org/eslintrc"
+        },
+        {
+            "fileMatch": [
+                ".babelrc"
+            ],
+            "url": "http://json.schemastore.org/babelrc"
+        },
+        {
+            "fileMatch": [
+                "manifest.json",
+                "manifest.*.json"
+            ],
+            "url": "http://json.schemastore.org/webextension"
+        }
+    ],
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+}

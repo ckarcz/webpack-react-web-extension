@@ -1,0 +1,46 @@
+{
+  "name": "webpack-browser-extension",
+  "description": "Browser Web Extension",
+  "version": "1.0.0",
+  "author": "ckarcz",
+  "license": "UNLICENSED",
+  "keywords": [
+    "web extension"
+  ],
+  "scripts": {
+    "start:dev": "npm run start:development",
+    "start:development": "webpack-dev-server --config ./webpack/webpack.config.js --colors --env.NODE_ENV=development --env.OUTPUT_PATH=dev --env.DEV_SRV=true",
+    "build:dev": "npm run build:development",
+    "build:development": "webpack --config ./webpack/webpack.config.js --colors --env.NODE_ENV=development --env.OUTPUT_PATH=dev",
+    "build:prod": "npm run build:production",
+    "build:production": "webpack --config ./webpack/webpack.config.js --colors --optimize-minimize --env.NODE_ENV=production --env.OUTPUT_PATH=prod"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.1.1",
+    "babel-preset-env": "1.7.0",
+    "babel-runtime": "6.26.0",
+    "clean-webpack-plugin": "0.1.16",
+    "eslint": "4.6.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-react": "7.3.0",
+    "html-webpack-harddisk-plugin": "^0.2.0",
+    "html-webpack-plugin": "2.30.1",
+    "pug-html-loader": "1.1.5",
+    "pug-loader": "2.4.0",
+    "raw-loader": "^0.5.1",
+    "web-ext-types": "2.1.0",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.11.2",
+    "webpack-merge": "4.1.0"
+  },
+  "dependencies": {
+    "loglevel": "1.6.1",
+    "loglevel-plugin-prefix": "0.8.4",
+    "react": "15.6.1",
+    "redux": "3.6.0",
+    "react-dom": "15.6.1"
+  }
+}
