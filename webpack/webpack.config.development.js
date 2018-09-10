@@ -8,7 +8,7 @@ const merge = require('webpack-merge');
 
 const baseConfigFactory = require('./webpack.config.base.js');
 
-const overrideConfigFactory = (env) => {
+const devConfigFactory = (env) => {
 
   const projectDir = process.cwd();
   const outputDir = path.resolve(projectDir, env.OUTPUT_PATH);
@@ -69,7 +69,7 @@ const overrideConfigFactory = (env) => {
 
 module.exports = (env) => {
   const baseConfig = baseConfigFactory(env);
-  const overrideConfig = overrideConfigFactory(env);
-  const mergedConfig = merge(baseConfig, overrideConfig);
+  const devConfig = devConfigFactory(env);
+  const mergedConfig = merge(baseConfig, devConfig);
   return mergedConfig;
 };
