@@ -1,5 +1,6 @@
 /**
- * Chrome extension options page script.
+ * Extension options page script.
+ * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
  * https://developer.chrome.com/extensions/options
  */
 

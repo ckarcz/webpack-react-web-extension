@@ -1,5 +1,6 @@
 /**
- * Chrome extension popup page script.
+ * Extension popup page script.
+ * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
  * https://developer.chrome.com/extensions/browserAction#popups
  */
 
