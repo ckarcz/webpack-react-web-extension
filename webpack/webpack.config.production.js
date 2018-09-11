@@ -2,13 +2,11 @@
  * Base webpack config common to all build types.
  */
 
-/* eslint-disable no-console */
-
 const merge = require('webpack-merge');
 
 const baseConfigFactory = require('./webpack.config.base');
 
-const overrideConfigFactory = (env) => {
+const prodConfigFactory = (env) => {
   return {
     module: {
       rules: [
@@ -33,7 +31,7 @@ const overrideConfigFactory = (env) => {
 
 module.exports = (env) => {
   const baseConfig = baseConfigFactory(env);
-  const overrideConfig = overrideConfigFactory(env);
-  const mergedConfig = merge(baseConfig, overrideConfig);
+  const prodConfig = prodConfigFactory(env);
+  const mergedConfig = merge(baseConfig, prodConfig);
   return mergedConfig;
 };
