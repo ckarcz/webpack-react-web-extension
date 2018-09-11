@@ -5,4 +5,4 @@ doctype html
 
 html
   head
-    script(src=(DEV_SRV=="true" ? `${DEV_SRV_URL}/js/background.bundle.js` : '../js/background.bundle.js'))
+    script(src=(DEV_SRV ? `${DEV_SRV_URL}/js/background.bundle.js` : '../js/background.bundle.js'))

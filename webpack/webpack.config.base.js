@@ -11,7 +11,7 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const baseConfigFactory = (env) => {
 
   const projectDir = process.cwd();
-  const outputDir = path.resolve(projectDir, 'dist', env.OUTPUT_PATH);
+  const outputDir = path.resolve(projectDir, env.OUTPUT_PATH);
 
   return {
     entry: {

@@ -1,18 +1,10 @@
 {
   "manifest_version": 2,
   "version": "1.0.0",
-  "name": "dealcloud-browser-extension",
-  "description": "DealCloud browser extension",
-  "icons": {
-    "16": "img/dc_16x16.png",
-    "32": "img/dc_32x32.png",
-    "48": "img/dc_48x48.png",
-    "64": "img/dc_64x64.png",
-    "128": "img/dc_128x128.png",
-    "256": "img/dc_256x256.png"
-  },
+  "name": "browser-web-extension",
+  "description": "Browser web extension",
   "browser_action": {
-    "default_title": "DealCloud",
+    "default_title": "Extension",
     "default_popup": "popup.html"
   },
   "background": {

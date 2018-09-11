@@ -6,7 +6,7 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    title DealCloud-PopUp
+    title Extension PopUp
   body
     #root
-    script(src=(DEV_SRV=="true" ? `${DEV_SRV_URL}/js/popup.bundle.js` : '../js/popup.bundle.js'))
+    script(src=(DEV_SRV ? `${DEV_SRV_URL}/js/popup.bundle.js` : '../js/popup.bundle.js'))
