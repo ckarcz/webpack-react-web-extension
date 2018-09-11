@@ -9,4 +9,4 @@ const browser = require('webextension-polyfill');
 logger.info('Background script loaded.');
 
 browser.runtime.getPlatformInfo()
-  .then(info => console.log('platform info: ', info));
+  .then(info => console.log('Platform info: ', info));

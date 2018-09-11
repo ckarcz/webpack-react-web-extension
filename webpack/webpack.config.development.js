@@ -13,10 +13,10 @@ const devConfigFactory = (env) => {
   const projectDir = process.cwd();
   const outputDir = path.resolve(projectDir, env.OUTPUT_PATH);
 
-  env.DEV_SRV = env.DEV_SRV || false;
-  env.DEV_SRV_HTTPS = env.DEV_SRV_HTTPS || true;
+  env.DEV_SRV = (env.DEV_SRV === 'true') || false;
+  env.DEV_SRV_HTTPS = (env.DEV_SRV_HTTPS === 'true') || true;
   env.DEV_SRV_HOST = env.DEV_SRV_HOST || 'localhost';
-  env.DEV_SRV_PORT = env.DEV_SRV_PORT || 8080;
+  env.DEV_SRV_PORT = env.DEV_SRV_PORT || 3000;
   env.DEV_SRV_URL = env.DEV_SRV_URL || `${env.DEV_SRV_HTTPS ? 'https' : 'http'}://${env.DEV_SRV_HOST}:${env.DEV_SRV_PORT}`;
 
   return {

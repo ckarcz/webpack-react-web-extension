@@ -5,9 +5,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const baseConfigFactory = (env) => {
 
@@ -35,28 +35,25 @@ const baseConfigFactory = (env) => {
           'NODE_ENV': `'${env.NODE_ENV}'`
         }
       }),
+      new WriteFilePlugin(),
       new HtmlWebpackPlugin({
         template: path.join(projectDir, 'src/extension/background/background.pug'),
         filename: 'html/background.html',
         chunks: ['background'],
         inject: false,
-        alwaysWriteToDisk: true // for HtmlWebpackHarddiskPlugin
       }),
       new HtmlWebpackPlugin({
         template: path.join(projectDir, 'src/extension/popup/popup.pug'),
         filename: 'html/popup.html',
         chunks: ['popup'],
         inject: false,
-        alwaysWriteToDisk: true // for HtmlWebpackHarddiskPlugin
       }),
       new HtmlWebpackPlugin({
         template: path.join(projectDir, 'src/extension/options/options.pug'),
         filename: 'html/options.html',
         chunks: ['options'],
         inject: false,
-        alwaysWriteToDisk: true // for HtmlWebpackHarddiskPlugin
       }),
-      new HtmlWebpackHarddiskPlugin(),
       new CopyWebpackPlugin([{
         from: path.join(projectDir, `src/extension/manifest.${env.NODE_ENV}.json`),
         to: 'manifest.json'
