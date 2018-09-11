@@ -19,9 +19,6 @@ const devConfigFactory = (env) => {
   env.DEV_SRV_PORT = env.DEV_SRV_PORT || 8080;
   env.DEV_SRV_URL = env.DEV_SRV_URL || `${env.DEV_SRV_HTTPS ? 'https' : 'http'}://${env.DEV_SRV_HOST}:${env.DEV_SRV_PORT}`;
 
-  console.log(env.DEV_SRV);
-  console.log(env.DEV_SRV_URL);
-
   return {
     plugins: [
       new webpack.DefinePlugin({

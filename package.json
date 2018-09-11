@@ -1,11 +1,11 @@
 {
-  "name": "browser-web-extension",
-  "description": "Browser Web Extension",
+  "name": "browser-extension",
+  "description": "Browser Extension",
   "version": "1.0.0",
   "author": "ckarcz",
   "license": "MIT",
   "keywords": [
-    "web-extension"
+    "browser extension"
   ],
   "scripts": {
     "start:dev": "npm run clean:dev && webpack-dev-server --config ./webpack/webpack.config.js --colors --env.NODE_ENV=development --env.OUTPUT_PATH=./dist/dev --env.DEV_SRV=true",
@@ -14,7 +14,9 @@
     "build:prod": "webpack --config ./webpack/webpack.config.js --colors --optimize-minimize --env.NODE_ENV=production --env.OUTPUT_PATH=./dist/prod",
     "clean:all": "rimraf ./dist",
     "clean:dev": "rimraf ./dist/dev",
-    "clean:prod": "rimraf ./dist/prod"
+    "clean:prod": "rimraf ./dist/prod",
+    "lint": "eslint src webpack --color",
+    "lint:fix": "eslint src webpack --fix --color"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -24,6 +26,7 @@
     "babel-preset-env": "1.7.0",
     "babel-runtime": "6.26.0",
     "clean-webpack-plugin": "0.1.16",
+    "copy-webpack-plugin": "4.0.1",
     "eslint": "4.6.1",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-react": "7.3.0",
@@ -33,7 +36,7 @@
     "pug-loader": "2.4.0",
     "raw-loader": "0.5.1",
     "rimraf": "2.6.2",
-    "web-ext-types": "2.1.0",
+    "webextension-polyfill": "0.3.1",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.11.2",
     "webpack-merge": "4.1.0"

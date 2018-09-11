@@ -4,5 +4,9 @@
  */
 
 const logger = require('../../common/util/loggerFactory').createLogger('background.js');
+const browser = require('webextension-polyfill');
 
 logger.info('Background script loaded.');
+
+browser.runtime.getPlatformInfo()
+  .then(info => console.log('platform info: ', info));

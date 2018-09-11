@@ -6,7 +6,7 @@ const merge = require('webpack-merge');
 
 const baseConfigFactory = require('./webpack.config.base');
 
-const prodConfigFactory = (env) => {
+const prodConfigFactory = () => {
   return {
     module: {
       rules: [

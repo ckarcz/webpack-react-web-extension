@@ -7,6 +7,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const baseConfigFactory = (env) => {
 
@@ -55,7 +56,15 @@ const baseConfigFactory = (env) => {
         inject: false,
         alwaysWriteToDisk: true // for HtmlWebpackHarddiskPlugin
       }),
-      new HtmlWebpackHarddiskPlugin()
+      new HtmlWebpackHarddiskPlugin(),
+      new CopyWebpackPlugin([{
+        from: path.join(projectDir, `src/extension/manifest.${env.NODE_ENV}.json`),
+        to: 'manifest.json'
+      }]),
+      new CopyWebpackPlugin([{
+        from: path.join(projectDir, 'src/assets'),
+        to: 'assets'
+      }])
     ],
     module: {
       rules: [

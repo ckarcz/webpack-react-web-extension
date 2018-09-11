@@ -1,17 +1,17 @@
 {
   "manifest_version": 2,
   "version": "1.0.0",
-  "name": "browser-web-extension",
-  "description": "Browser web extension",
+  "name": "Bbrowser-extension",
+  "description": "Browser extension",
   "browser_action": {
     "default_title": "Extension",
-    "default_popup": "popup.html"
+    "default_popup": "html/popup.html"
   },
   "background": {
-    "page": "background.html"
+    "page": "html/background.html"
   },
   "options_ui": {
-    "page": "options.html",
+    "page": "html/options.html",
     "open_in_tab": false
   },
   "permissions": [
